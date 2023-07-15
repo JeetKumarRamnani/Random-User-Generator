@@ -20,6 +20,9 @@ userGenerateBtn.addEventListener("click", async () => {
 const URL = "https://randomuser.me/api/";
 
 async function getRandomUser() {
+  userGenerateBtn.disabled = true; // Disable the button while data is fetching so that user couldnot be able to request again while data is being fetched
+  userGenerateBtn.style.opacity = 0.2;
+  userGenerateBtn.style.cursor = "none";
   try {
     const response = await fetch(URL);
     const data = await response.json();
@@ -28,6 +31,9 @@ async function getRandomUser() {
   } catch {
     alert("Internet Disconnected");
   }
+  userGenerateBtn.disabled = false; // Renabling The Button So That User Can Request For New Random User
+  userGenerateBtn.style.opacity = 1;
+  userGenerateBtn.style.cursor = "pointer";
 }
 
 getRandomUser();
@@ -49,7 +55,7 @@ function updateDomElements(userData) {
   userInfoDescription.textContent = `${userData.name.first} ${userData.name.last}`;
 
   for (let individualElement of allIcons) {
-    console.log(individualElement);
+    // console.log(individualElement);
 
     individualElement.addEventListener("click", (e) => {
       console.log("for of loop working");
@@ -76,7 +82,3 @@ function updateDomElements(userData) {
     });
   }
 }
-
-// updateDomElements();
-
-function bindElementsToDom() {}
