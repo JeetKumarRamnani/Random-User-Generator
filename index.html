@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Random User Gernator</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div class="Container">
+    <div class="wrapper relative">
+      <div
+        class="User-Profile-Container absolute top-1/4 left-2/4 translate-x-[-50%] w-[650px] bg-white h-[450px] rounded-md shadow-xl">
+        <div class="Top-Section  border-gray-400 bg-gray-200 w-full h-[30%] rounded-tl-md rounded-tr-md relative">
+          <img src="https://randomuser.me/api/portraits/women/30.jpg" alt="random picture"
+            class="absolute top-2/4 right-2/4 translate-x-2/4 rounded-full ring-4 ring-white shadow-lg shadow-black hover:opacity-70 transition-opacity duration-200 cursor-pointer"
+            id="userImage" />
+        </div>
+        <div class="Bottom-Section flex justify-center items-center h-[80%] flex-col gap-3 mt-5">
+          <p class="text-2xl" id="userInfoTitle">My Name Is</p>
+          <span class="mt-2 text-xl mb-2" id="userInfoDescription">Arctic Way</span>
+          <div class="icons-tray flex gap-20" id="iconsTray">
+            <i
+              class="far fa-user text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+            <i
+              class="far fa-envelope-open text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+            <i
+              class="far fa-calendar-times text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+            <i
+              class="far fa-map text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+            <i
+              class="fas fa-phone text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+            <i
+              class="fas fa-user-lock text-gray-400 text-2xl cursor-pointer hover:text-blue-400 transition-colors duration-300"></i>
+          </div>
+          <button type="submit"
+            class="bg-blue-400 tracking-widest text-lg mt-2 text-white p-5 py-2 rounded-md cursor-pointer hover:bg-blue-600 transition-colors duration-300"
+            id="userGenerateBtn">
+            Random User
+          </button>
+        </div>
+      </div>
+      <div class="Black-Bg-Section bg-[#2c2e31] w-full h-[50vh]"></div>
+      <div class="White-Bg-Section bg-[#F1F5F8] w-full h-[50vh]"></div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
